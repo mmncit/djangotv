@@ -1,0 +1,45 @@
+﻿{% extends "app/layout.html" %}
+{% block content %}
+    <main>
+
+    <div class="container">
+        <div class="row">
+            <div class="banner" style="background: url({{path}}); background-size: 100%; background-position: center;"> </div>   
+            <div class="col episode-info">
+                    <h1> Season: {{season_num}}, Episode: {{ ep_num }} </h1> 
+                    <h1>{{ name | truncatechars:50 }} </h1>
+                    <h2> Overview </h2>
+                    <h4> {{ overview }} </h4> 
+                    
+            </div>
+            <div class="col-md-10 episode-info">
+                <h3> Episode Crew: </h3> 
+                <div>
+                            {% for crew_name, crew_job, crew_profile_path in crew_info %}
+                    
+                             <div class="card">
+                                    <img src={{crew_profile_path}} alt="Image is not available">
+                                    <h4>{{crew_name}}</h4>
+                                    <p class="title">{{crew_job}}</p>
+                             </div>
+                            {% endfor %} 
+                </div>
+            </div>
+        
+            <div class="col-md-10 episode-info">
+                        <h3> Guest Stars: </h3>
+                        <div>
+                            {% for star_name, star_job, star_profile_path in star_info %}
+                    
+                               <div class="card">
+                                    <img src={{star_profile_path}} alt="Image is not available">
+                                    <h4>{{star_name}}</h4>
+                                    <p class="title">{{star_job}}</p>
+                               </div>
+                            {% endfor %} 
+                        </div>
+            </div>
+        </div>
+    </div>
+    </main>
+{% endblock %}

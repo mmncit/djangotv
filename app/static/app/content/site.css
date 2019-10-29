@@ -1,0 +1,185 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background: url('../images/bkgCover.png'), url('../images/pageBkg.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.basic {
+    width: calc(100% - 52px);
+    border-radius: 8px;
+    min-height: 150px;
+    background: #fff;
+    color: #333;
+    font-weight: 700;
+    margin: 13px 0;
+    border: 1px solid #333;
+    padding: 25px;
+    font-size: 1.3em;
+}
+.basic:nth-child(even) {
+    background: #ccc;
+    color: #000;
+}
+#asciiArt {
+    color: #fff;
+    font-weight: 900;
+    font-size: 1.3em;
+    background: rgba(0,0,0,0);
+    border: 0;
+    margin: 0 auto;
+}
+
+.seasonThumbs {
+    width: 220px;
+    border-radius: 16px;
+    border: 1px solid #444;
+    box-shadow: 3px 3px rgba(0,0,0,.33);
+    margin: 25px;
+    display: inline-block;
+}
+    /* Season styles */
+    .thumb {
+        width: calc(100% - 2px);
+        border-radius: 16px;
+    }
+    .seasonThumbs > p {
+        position: relative;
+        padding: 3px 13px;
+        bottom: 45px;
+        background: #000;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.3em;
+        z-index: 3;
+    }
+    
+    /* Episode styles */
+    .episode {
+        width: 48%;
+        height: 300px;
+        padding: 0 10px;
+        padding-top: 135px;
+        border: 1px solid #fff;
+        margin: 2% 1%;
+        box-shadow: 3px 3px rgba(0,0,0,.33);
+        border-radius: 16px;
+        background: #fff;
+        float: left;
+    }
+    .episode > h3 {
+        color: #78a1fc;
+        font-weight: 900;
+        position: relative;
+        top: 25px;
+        text-shadow: 1px 1px rgba(0,0,0,.42);
+        background: rgba(0,0,0,.67);
+        margin-bottom: -5px;
+        padding-left: 15px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+    }
+        .episode > a {
+            color: #78a1fc;
+            font-weight: 900;
+            position: relative;
+            text-decoration: none;
+            top: 25px;
+            text-shadow: 1px 1px rgba(0,0,0,.42);
+            background: rgba(0,0,0,.67);
+            margin-bottom: -5px;
+            padding-left: 15px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+        }
+    .episode > p {
+        color: #e5e5e5;
+        font-weight: 700;
+        font-size: 1.3em;
+        background: linear-gradient(to bottom, rgba(0,0,0,.67), rgba(0,0,0,.42), rgba(0,0,0,.19));
+        position: relative;
+        padding: 3px 15px;
+        padding-bottom: 10px;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        top: 30px;
+        margin-bottom: 0;
+    }
+    .episode > form {
+        position: relative;
+        width: 100%;
+        margin-left: calc(100% - 75px);
+        margin-bottom: 23px;
+        z-index: 13;
+    }
+        .episode > form > input[type='submit'] {
+            width: 80px;
+            height: 25px;
+            border-radius: 16px;
+            background: linear-gradient(to right, #fc5c7d, #6a82fb);
+            color: #333;
+            border: 0;
+            font-weight: 700;
+        }
+        .episode > form > input[type='submit']:hover {
+            color: #fff;
+            background: #333;
+        }
+footer {
+    clear: both;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.2em;
+    margin: 25px 0;
+}
+
+
+
+
+
+
+
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}

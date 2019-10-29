@@ -1,0 +1,24 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+    <main>
+
+        {% for name, overview, path, ep_num in ep_details %}
+        
+            <div class="episode" style="background: url({{path}}); background-size: 100%; background-position: center;">
+                    <a href="../episode_details/{{ season_num}}/{{ ep_num }}" title="click to see more">
+                    <h3>ep{{ forloop.counter}} - {{ name | truncatechars:29 }}</h3>
+                    </a>
+                <p>{{ overview | truncatechars:95 }}</p>
+                <form method="post" action="/add_episode_to_watch/best_zombie/333">
+                {% csrf_token %}
+                <input type="submit" value="&#9733; SAVE" />
+                </form>
+            </div>
+
+        {% endfor %}
+
+    </main>
+
+{% endblock %}

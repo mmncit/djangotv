@@ -1,0 +1,36 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+    <main>
+        <!-- basic URL -->
+        <div class="basic" id="urlOnly">
+            <a href="{% url 'contact' %}">Take me to your leader.</a>
+        </div>
+
+        <!-- form using GET -->
+        <div class="basic" id="usingGet">
+            <h1>{{ secret }}</h1>
+            <form method="get" action="/secret">
+                {% csrf_token %}
+                <input type="text" name="secret" placeholder="enter your secret here..." />
+                <input type="submit" value="Send your secret" />
+            </form>
+        </div>
+        
+        <!-- form using POST -->
+        <div class="basic" id="usingPost">
+            <h1>{{ country }}</h1>
+            <form method="post" action="/info">
+                {% csrf_token %}
+                <select name="country">
+                    <option value="0">select your country...</option>
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                </select>
+                <input type="submit" value="Find my socks" />
+            </form>
+        </div>
+    </main>
+
+{% endblock %}

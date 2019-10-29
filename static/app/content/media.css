@@ -1,0 +1,60 @@
+.banner {
+    width: 50%;
+    height: 300px;
+    padding: 0 10px;
+    padding-top: 135px;
+    border: 1px solid #fff;
+    margin: 2% 1%;
+    box-shadow: 3px 3px rgba(0,0,0,.33);
+    border-radius: 16px;
+    background: #fff;
+    float: left;
+}
+
+.episode-info {
+    color: whitesmoke;
+}
+
+    .episode-info > h1 {
+        color: palevioletred;
+        font-size: 50px;
+    }
+    .episode-info > h2 {
+        color: silver;
+       
+    }
+
+.card {
+    border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 0px 0px;
+    -webkit-border-radius: 0px 0px 0px 0px;
+    
+   
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    float: left;
+    margin: 10px
+}
+
+    .card > img {
+        width: 150px;
+        height: 150px;
+        border-radius: 16px 16px 16px 16px;
+        -moz-border-radius: 16px 16px 16px 16px;
+        -webkit-border-radius: 16px 16px 16px 16px;
+        border: 1px solid #ebe4eb;
+    }
+
+    .card > h4 {
+    
+    margin-top: 8px;
+    display: block;
+    color: blanchedalmond;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial,sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    }
