@@ -1,1 +1,5 @@
 *.pyc
+Scripts/
+Include/
+Lib/
+tcl/
