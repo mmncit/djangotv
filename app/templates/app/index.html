@@ -1,17 +1,16 @@
-{% extends "app/layout.html" %}
+{% extends "app/layout.html" %} {% block content %}
 
-{% block content %}
-
-    <main>
-
-    {% for image in images %}
-        <div class="seasonThumbs">
+<main>
+  {% for image in images %}
+  <div class="seasonThumbs">
+      {% if forloop.first == False and forloop.last == False %}
             <a href="episodes/{{ forloop.counter0 }}" title="see episodes">
-                <img class="thumb" src="https://image.tmdb.org/t/p/original{{image}}" alt="dog" />
-            </a>
-        </div>
-    {% endfor %}
-
-    </main>
+      {% endif %}
+      <img class="thumb" src="https://image.tmdb.org/t/p/original{{ image }}" alt="dog" />
+      
+    </a>
+  </div>
+  {% endfor %}
+</main>
 
 {% endblock %}
