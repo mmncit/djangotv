@@ -4,6 +4,7 @@ import requests
 import datetime
 import json
 
+API_KEY = "d194eb72915bc79fac2eb1a70a71ddd3"
 
 class fetch():
     
@@ -18,9 +19,7 @@ class fetch():
             air_date - the year of season
         '''
 
-        api_key = "d194eb72915bc79fac2eb1a70a71ddd3"
-
-        url = "https://api.themoviedb.org/3/tv/1402?api_key=" + api_key
+        url = "https://api.themoviedb.org/3/tv/1402?api_key=" + API_KEY
         response = requests.get(url)
         stuff = []
 
@@ -48,12 +47,10 @@ class fetch():
             still_path - episode image??
             and mucho more!
         '''
-        
-        api_key = "d194eb72915bc79fac2eb1a70a71ddd3"
 
-        url = "https://api.themoviedb.org/3/tv/1402/season/" + season_num + "?api_key=" + api_key
+        url = "https://api.themoviedb.org/3/tv/1402/season/" + season_num + "?api_key=" + API_KEY
         response = requests.get(url)
-        stuff = []
+        episodedetails = []
 
         if(response.ok):
             jData = json.loads(response.content)
@@ -72,15 +69,15 @@ class fetch():
                 ep_num = data[idx]['episode_number']
                 ep_nums.append(ep_num)
 
-            stuff.append(names)
-            stuff.append(overviews)
-            stuff.append(paths)
-            stuff.append(ep_nums)
+            episodedetails.append(names)
+            episodedetails.append(overviews)
+            episodedetails.append(paths)
+            episodedetails.append(ep_nums)
             
         else:
-            stuff = None
+            episodedetails = None
 
-        return stuff
+        return episodedetails
 
     
     def getEpisodeDetails(season_num, ep_num):
@@ -97,7 +94,7 @@ class fetch():
         '''
         api_key = "d194eb72915bc79fac2eb1a70a71ddd3"
 
-        url = "https://api.themoviedb.org/3/tv/1402/season/" + season_num + "/episode/" + ep_num + "?api_key=" + api_key
+        url = "https://api.themoviedb.org/3/tv/1402/season/" + season_num + "/episode/" + ep_num + "?api_key=" + API_KEY
         response = requests.get(url)
         episodedetails = {} # dictionary for episode details
 

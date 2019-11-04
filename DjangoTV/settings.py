@@ -1,5 +1,5 @@
 """
-Django settings for DjangoFinalProject2019 project.
+Django settings for DjangoTV project.
 
 Based on 'django-admin startproject' using Django 2.1.2.
 
@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'DjangoFinalProject2019.urls'
+ROOT_URLCONF = 'DjangoTV.urls'
 
 # Template configuration
 # https://docs.djangoproject.com/en/2.1/topics/templates/
@@ -75,7 +75,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'DjangoFinalProject2019.wsgi.application'
+WSGI_APPLICATION = 'DjangoTV.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 DATABASES = {

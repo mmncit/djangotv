@@ -1,1 +1,1 @@
-web: gunicorn DjangoFinalProject2019.wsgi --log-file -
+web: gunicorn DjangoTV.wsgi --log-file -
