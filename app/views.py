@@ -14,8 +14,8 @@ import json
 def home(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
-    stuff = fetch.fetch.fetch_season_info()
-    images = stuff[0]
+    info = fetch.fetch.fetch_season_info()
+    images = info[0]
 
     return render(
         request,
